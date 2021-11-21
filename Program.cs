@@ -10,21 +10,37 @@ namespace cse210_batter_csharp
     {
         static void Main(string[] args)
         {
-            // Create the cast
+        // Create the cast
             Dictionary<string, List<Actor>> cast = new Dictionary<string, List<Actor>>();
 
-            // Bricks
+        // Bricks
             cast["bricks"] = new List<Actor>();
 
-            // TODO: Add your bricks here
+        // Add Bricks Here
+        // Brick brick = new Brick(new Point(10,10));
+           
+        //    cast["bricks"].Add(brick);
+           for (int y = 5; y < Constants.MAX_Y / 2.5;
+                y += (Constants.BRICK_HEIGHT + Constants.BRICK_SPACE))
+            {
+                for (int x = 5; x < (Constants.MAX_X - 5);
+                    x += (Constants.BRICK_WIDTH + Constants.BRICK_SPACE))
+                {
+                    Point position = new Point(x,y);
+                    cast["bricks"].Add(new Brick(position));
 
+                }
+                
+            }
+        
             // The Ball (or balls if desired)
             cast["balls"] = new List<Actor>();
-
-            // TODO: Add your ball here
+            Ball ball = new Ball(new Point(700,500));
+            // cast["balls"].Add(ball()
 
             // The paddle
             cast["paddle"] = new List<Actor>();
+            Paddle paddle = new Paddle(new Point(700,500));
 
             // TODO: Add your paddle here
 
