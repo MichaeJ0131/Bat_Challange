@@ -35,12 +35,15 @@ namespace cse210_batter_csharp
         
             // The Ball (or balls if desired)
             cast["balls"] = new List<Actor>();
-            Ball ball = new Ball(new Point(700,500));
+            Ball ball = new Ball(new Point(400,350));
+            cast["balls"].Add(ball);
             // cast["balls"].Add(ball()
 
             // The paddle
-            cast["paddle"] = new List<Actor>();
+            cast["paddles"] = new List<Actor>();
             Paddle paddle = new Paddle(new Point(700,500));
+            cast["paddles"].Add(paddle);
+
 
             // TODO: Add your paddle here
 
